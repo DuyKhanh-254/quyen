@@ -76,6 +76,9 @@ export default function App() {
             <motion.div key="home" {...pageTransition}>
               <section className="business-hero">
                 <div className="hero-grid-lines" aria-hidden="true" />
+                <div className="hero-stickers" aria-hidden="true">
+                  {Array.from({ length: 10 }, (_, index) => <i key={index} className={`hero-sticker sticker-${index + 1}`} />)}
+                </div>
                 <div className="hero-copy">
                   <div className="edition-line"><span>UEB · VNU 2026</span><span>PORTFOLIO No.01</span></div>
                   <span className="hero-label">Quản trị kinh doanh · Business Administration</span>
@@ -88,7 +91,6 @@ export default function App() {
 
                 <motion.div className="hero-visual" initial={{ opacity: 0, x: 65 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8 }}>
                   <div className="portrait-frame"><img src="/avatar.png" alt="Nguyễn Tương Thị Quyên tại khuôn viên trường" /><div className="portrait-label"><span>Student profile</span><strong>25051687</strong></div></div>
-                  <div className="growth-card"><span>LEARNING GROWTH</span><div className="mini-chart"><i /><i /><i /><i /><i /><i /></div><strong>+6 capabilities</strong></div>
                   <div className="decision-card"><Target /><span>Think<br />Plan<br />Execute</span></div>
                 </motion.div>
                 <div className="scroll-note"><ArrowDown /> SCROLL TO REVIEW</div>
@@ -142,7 +144,7 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <footer><div className="footer-brand">Q.</div><div><strong>NGUYỄN TƯƠNG THỊ QUYÊN</strong><span>25051687 · UEB · VNU1001_E252042</span></div><span>BUSINESS PORTFOLIO © 2026</span></footer>
+      <footer><div className="footer-avatar"><img src="/avatar.png" alt="Ảnh Nguyễn Tương Thị Quyên" /></div><div><strong>NGUYỄN TƯƠNG THỊ QUYÊN</strong><span>25051687 · UEB · VNU1001_E252042</span></div><span>BUSINESS PORTFOLIO © 2026</span></footer>
 
       <AnimatePresence>
         {selected && <motion.div className="modal-backdrop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onMouseDown={(event) => event.currentTarget === event.target && setSelected(null)}>
