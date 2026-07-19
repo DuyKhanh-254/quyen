@@ -56,7 +56,7 @@ export default function App() {
   return (
     <div className="app-shell">
       <a href="#content" className="skip-link">Đi đến nội dung</a>
-      <img className="school-logo" src="/ulis-logo.jpg" alt="Logo Trường Đại học Ngoại ngữ - ĐHQGHN" />
+      <img className="school-logo" src="/ueb-logo.jpg" alt="Logo Trường Đại học Kinh tế - ĐHQGHN" />
       <header className="topbar">
         <button className="brand" onClick={() => navigate('home')} aria-label="Về trang chủ">
           <span className="brand-monogram">Q.</span><span><strong>QUYÊN</strong><small>BUSINESS PORTFOLIO</small></span>
@@ -109,7 +109,7 @@ export default function App() {
               <section className="portfolio-preview">
                 <div className="section-container preview-layout">
                   <div className="preview-copy"><span>02 / COURSEWORK</span><h2>Six projects.<br /><em>One operating system.</em></h2><p>Mỗi bài tập đại diện cho một mắt xích trong hoạt động quản trị: vận hành dữ liệu, nghiên cứu thị trường, năng suất AI, quản trị dự án, thương hiệu và quản trị rủi ro.</p><button className="button sky" onClick={() => navigate('assignments')}>Mở danh mục bài tập <ArrowRight /></button></div>
-                  <div className="preview-list">{assignments.slice(0, 4).map((item) => <button key={item.id} onClick={() => setSelected(item)}><span>{item.code}</span><strong>{item.shortTitle}</strong><small>{item.category}</small><ArrowRight /></button>)}</div>
+                  <div className="preview-list">{assignments.map((item) => <button key={item.id} onClick={() => setSelected(item)}><span>{item.code}</span><strong>{item.title}</strong><small>{item.category}</small><ArrowRight /></button>)}</div>
                 </div>
               </section>
             </motion.div>
