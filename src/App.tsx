@@ -90,7 +90,7 @@ export default function App() {
                 </div>
 
                 <motion.div className="hero-visual" initial={{ opacity: 0, x: 65 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: .8 }}>
-                  <div className="portrait-frame"><img src="/avatar.png" alt="Nguyễn Tương Thị Quyên tại khuôn viên trường" /><div className="portrait-label"><span>Student profile</span><strong>25051687</strong></div></div>
+                  <div className="portrait-frame"><img src="/avatar.png" alt="Nguyễn Tương Thị Quyên tại khuôn viên trường" /><div className="portrait-label"><span>Nguyễn Tương Thị Quyên</span></div></div>
                   <div className="decision-card"><Target /><span>Think<br />Plan<br />Execute</span></div>
                 </motion.div>
                 <div className="scroll-note"><ArrowDown /> SCROLL TO REVIEW</div>
