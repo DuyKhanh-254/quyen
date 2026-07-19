@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
+
+# Tệp nguồn tham khảo đã được xử lý sang public
+/stitch_sky_blue_portfolio/
+/*.pdf
+/Ảnh.png
